@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.node {
+  
+}
+
+.caret-btn {
+  background: none;
+  border: none;
+  margin-left: -36px;
+  width: 25px;
+}

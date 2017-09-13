@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+body .dnd-drag-start {
+    border: 2px dashed #000;
+}
+
+body .dnd-sortable-drag {
+  border: 1px dashed #000;
+}
+
+
+.dnd-drag-enter {
+  /* border: 2px dashed #000 !important; */
+  background: rgba(0,0,0,0.05);
+}
+
+.dnd-drag-over {
+  /* border: 2px dashed #000 !important; */
+  background: rgba(0,0,0,0.05);
+}
+
+button {
+  outline: none !important;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.item {
+  background: lightgray;
+}
+
+.item:nth-child(even) {
+  background: white;
+}
+
+.item:nth-child(odd) {
+  background: #e4e4e4;
+}
+
+.items-container {
+  border: 1px solid gray;
+}
+
+.inner {
+  /* background: rgba(0,0,0,0.1); */
+}
+
+.left-container {
+}

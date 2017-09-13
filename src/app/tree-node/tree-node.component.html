@@ -1,0 +1,25 @@
+<div dnd-draggable
+     [dragData]="node"
+     [dropZones]="['zone1', 'zone2']">
+
+<div class="p-1 node d-flex flex-column"
+     dnd-droppable
+     [dropZones]="['zone1', 'zone2']"
+     (onDropSuccess)="onDropSucess($event)">
+  <div class="d-flex">
+    <button type="button"
+            class="caret-btn mr-2"
+            *ngIf="node.children.length > 0"
+            (click)="collapsed = !collapsed">
+      <i *ngIf="collapsed" class="fa fa-caret-right"></i>
+      <i *ngIf="!collapsed" class="fa fa-caret-down"></i>
+    </button>
+    <img [src]="nodeImg" class="mr-2" aria-hidden="true">
+    <span> {{node.label}} </span>
+    <span *ngIf="node.mandatory"> Mandatory </span>
+  </div>
+  <div class="children pl-4 mt-1" *ngIf="node.children?.length > 0" [hidden]="collapsed">
+    <tree-node class="mt-2" *ngFor="let node of node.children" [node]="node"></tree-node>
+  </div>
+</div>
+</div>
